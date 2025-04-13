@@ -145,17 +145,17 @@ Seevice ile çalıştırmak için
 
   nano /etc/systemd/system/bitz.service  
 
-  [Unit]
-  Description=Bitz Collection Service
-  After=network.target
-  
-  [Service]
-  Type=simple
-  User=root
-  WorkingDirectory=/root
-  ExecStart=/root/.cargo/bin/bitz collect --cores 12
-  Restart=on-failure
-  RestartSec=10s
-  
-  [Install]
-  WantedBy=multi-user.target
+    [Unit]
+    Description=Bitz Collection Service
+    After=network.target
+    
+    [Service]
+    Type=simple
+    User=root
+    WorkingDirectory=/root
+    ExecStart=/root/.cargo/bin/bitz collect --cores 12
+    Restart=on-failure
+    RestartSec=10s
+    
+    [Install]
+    WantedBy=multi-user.target
